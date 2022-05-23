@@ -1,18 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 // import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
+import {BrowserRouter as Router,Route , Switch } from 'react-router-dom';
 
 function App() {
-  const title = "WELCOME TO BLOGs";
+  // const title = "WELCOME TO BLOGs";
   return (
+    <Router>
     <div className="App">
       <Navbar/>
       <div className="content">
-      <Home />
+      <Switch>
+         <Route exact path="/">
+           <Home/ >
+        </Route>
+        </Switch>
       </div>
-        
-    </div>
+       </div>
+    </Router>
   );
 }
 
